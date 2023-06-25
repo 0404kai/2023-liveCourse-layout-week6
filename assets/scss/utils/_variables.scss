@@ -298,10 +298,10 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
+$primary:       #030303 !default; // $blue;
+$secondary:     #FBFF22 !default;  // $gray-600
+$success:       #C96464 !default;  // $green
+$info:          #F3F1E5 !default; // $cyan
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
@@ -378,7 +378,7 @@ $spacers: (
   2: $spacer * .5,
   3: $spacer,
   4: $spacer * 1.5,
-  5: $spacer * 3,
+  5: $spacer * 2, // 3
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -586,11 +586,11 @@ $font-sizes: (
 // scss-docs-end font-sizes
 
 // scss-docs-start headings-variables
-$headings-margin-bottom:      $spacer * .5 !default;
+$headings-margin-bottom:      0 !default;  // $spacer * .5
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-line-height:        1 !default;   // 1.2
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 

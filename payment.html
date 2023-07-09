@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>結帳</title>
+  <script type="module" crossorigin src="/2023-liveCourse-layout-week6/assets/main-316e6f91.js"></script>
+  <link rel="stylesheet" href="/2023-liveCourse-layout-week6/assets/main-466a239d.css">
+</head>
+
+<body class="bg-info">
+  <header class="position-relative border-bottom border-2 border-primary mt-2 mb-3 mt-md-4 mb-md-5">
+  <div class="container d-flex align-items-center pb-3 pb-md-4">
+      <h1 class="me-md-6">
+        <a href="../pages/index.html" class="d-flex align-items-center">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAABqCAYAAABUIcSXAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAATESURBVHgB7Z0xTFNRFIYvtBo0xldDjCEOJXFwk0Gjmw4aNnUgsukgkUkcCGyEwbhpHIAJooOOxgHYTBx0w+hQNxOH1sQQVLRFo0RRvP+jr719YGmxlPufnC8x9jXPBt/HOfeccx+PlkQisWoU72k1CgUqigQVRUIy/sbyStooO09bMldxrBFFgooiQUWRoKJIUFEkqCgSVBQJKooEFUWCiiJBRZGgokhQUSSoKBJUFAkqigQVRYKKIkFFkaCiSFBRJIgTlcn8NLnsipGGOFGF/B/z2sqSRtIIA5JWTYuRhjhRuexvI/GnHsSJyubkrU9AnCisUfgjDXmpDxElMPcJXKNkpj5R5bmb8qQJEyVKaiEB5EaUMGnCRJWrCPRTkhAlKi+wLI+QFVGFchTlC7KkeS+qnijJO6mv1qYXn88Qid6Lwnj15PF58/zZsmkkkHPrZsF0n10wqZT/icX7rzCwF/HCxT3hBR0e/FL1XLd3qtZHQfqpE/NWVN7cuXvAMECxRg3c2G/SnUkzPrZkjh55/1/N7IT9DEjHZ1y3n3v6TJthgEIUomrqXnv4Gv0RomFm+oepl2tXF81QMSrT6SRNNAGaqg/f+beLFxbrS2/Ph3CNcXGbXLfqw/mIoocPvoXHWJOePD1kmKAqz5ECL1/ZVzrGGhOXFeFWff19ixXFyKSNTqRSJuj6qKn77RXrSjVZAAXIzPT30vHIaMoWJ3sNG5QN76PHBysuNmSNj31dd97a+0ulY0gaGQ0MIy3xBysyPbQK0eKKqAabJFEPrUJxUcvFr/U8n/FmRY16I1Ru0eS7UCiPd9zeCRVdPfdFzNpSftYp51Gal14XiwpUgkHQGrYCqVRL+DfO82Vq0bTUhwudyfwy76yIrH29JmQllOH7bixkQlokr9MeH+vaFR53de0228GOpT4IwXdqdOcJXjHM2CIQ2eXbOlfDiE4Fzfv6vSkmcCEQbfni7V6YhGPbIpqIV8zxYru3mw1s3XI+SnER5dRn012QKL6XKKXHneq34hHlzRqVCteG+tMIZne1iGIvJqirPvRJQ5tM1KPzhms4z2doRcUnEuiT3BTnzgYB+q1LPR9pt+spRcUlYbtio9Q2EHt/1o6Seq0sRuhEYXvDlYRRUrXtivhEAusZtjvYoBKFyq+/71PpGOltsrhPBYJ/lPtxWdju2Gg26DNUorrPLZTWGGx3YE/J7cXcvsadPgDIwjA3On948HPD78PYTmhEoWqLeikUCdjuqJfzNk3Ovewo9UZIgSzFBYUofOejakOUIIpQJGwVSHrz9nD4GWicJ0hSIIUo9EpYY+ZedVS9GcWdImw2UUBUQjo2FRmiyvv9aIyT4mtRo4D0F1a+imoAQR2C1oa+W/l3egNmU4mGqqCZk+1mIPYRO250SUCUKGxPRAREe121IEuU0+SqKBLikwl2hKW+shymbf5aEPeciVCWPhDEf3A/hLRoAjIjSiDi/ledtojQx8ARgF5KH6xIQDqNO1jliRK36ka3GkuD+sduJKO/K54UFUWCiiJBRZGgokhQUSSoKBJUFAkqigQVRYKKIkFFkaCiSFBRJKgoElQUCSqKBBVFgooiQUWRoKJIWHcXkuInGlEkqCgSVBQJfwFJWMcKLx/BoQAAAABJRU5ErkJggg==" alt="logo" class="logo me-4 me-md-3">
+          <span class="d-none d-lg-block h2 me-1">7TAO</span>
+          <span class="d-none d-lg-block h6 fw-bold">活動訂票網</span>
+        </a>
+      </h1>
+      <div class="search d-flex align-self-md-stretch border border-1 border-primary me-4 me-md-0">
+        <input type="text" class="form-control border-primary bg-transparent rounded-0 shadow-none" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="探索活動">
+        <button class="btn text-secondary bg-black rounded-0 hover-scale" type="button" id="button-addon2"><i class="icofont-search-1"></i></button>
+      </div>
+      <nav class="navbar align-self-stretch ms-auto py-0">
+        <button class="btn-no-focus navbar-toggler h-100 border-1 border-primary rounded-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuList" aria-controls="menuList" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="menu nav h5 d-none d-md-flex">
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#register">
+              <i class="icofont-ui-file"></i>
+              REGISTER
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../pages/login.html" class="nav-link">
+              <i class="icofont-ui-user"></i>
+              LOGIN
+            </a>
+          </li>
+        </ul>
+      </nav>
+  </div>
+  <div class="burgerMenu container-fluid collapse position-absolute py-4 h5 border-top border-bottom border-2 border-primary bg-info d-md-none" id="menuList">
+    <ul class="navbar-nav">
+      <li class="me-4 mb-3 mb-md-0">
+        <a href="#">
+          <i class="icofont-ui-file"></i>
+          REGISTER
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="icofont-ui-user"></i>
+          LOGIN
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<div class="modal fade" id="register" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-0 text-center">
+      <div class="modal-header d-block position-relative border-bottom border-3 border-primary">
+        <h5 class="modal-title" id="registerLabel">立刻成為7TAO會員</h5>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3 p-0" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-md-6">
+        立刻成為七逃會員，加速活動報名流程並取得活動優惠資訊。<br>
+        您也可以先報名活動，日後再註冊帳號，<br>
+        系統會在認證您的Email後，協助您找回舊的訂單。
+      </div>
+      <div class="modal-footer border-0 pb-md-6">
+        <a href="#" class="btn btn-primary text-secondary rounded-0 mx-auto px-5 py-2">立即成為會員</a>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="container mb-6 mb-lg-7">
+      <div class="checkout mx-auto">
+        <ol class="position-relative d-flex justify-content-between text-center mb-4 mb-lg-6">
+          <li>
+            <span
+              class="d-flex justify-content-center align-items-center border border-primary text-secondary bg-primary mx-auto mb-2"><i
+                class="icofont-verification-check"></i></span>
+            <h4 class="h6">訂單確認</h4>
+          </li>
+          <li>
+            <span
+              class="d-flex justify-content-center align-items-center border border-primary text-secondary bg-primary mx-auto mb-2">2</span>
+            <h4 class="h6">結帳付款</h4>
+          </li>
+          <li>
+            <span
+              class="d-flex justify-content-center align-items-center border border-primary bg-info mx-auto mb-2">3</span>
+            <h4 class="h6">訂購結果</h4>
+          </li>
+        </ol>
+        <h2 class="display-5 text-lg-center lh-sm mb-3">返老還童-制服聯誼</h2>
+        <p class="hint text-center text-secondary bg-primary p-2 mb-4 mb-lg-5">您的訂單已保留，請在2023/5/30 04:32 前完成繳費。若逾期未繳款，系統將取消您的訂單。</p>
+        <ul class="border-top border-2 border-primary mb-5 mb-lg-6">
+          <li class="d-flex justify-content-between border-bottom border-1 border-primary py-2">
+            <span>訂單編號</span>
+            <span>892746123</span>
+          </li>
+          <li class="d-flex justify-content-between border-bottom border-1 border-primary py-2">
+            <span>票券</span>
+            <span>改頭換面票（含大改造）$8000</span>
+          </li>
+        </ul>
+        <h3 class="text-center mb-3">
+          <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAANgSURBVHgB7ZvdddpAEIUHBM+og2w6UAm4EzqIO4g7cDrAHTgdkA6wK0AdGL/xACh38K7OsJHE2hHMSvCds0cSEovmzuzfSBDdUCW1RY0h6ZKhGFJEVYAkSQxKRoqMSJGiKAwpNwFVAQaDAXv/jRRRFQBMEAXfSBFtAQyigK4WdIAFF1JEcxSQnZ8hJTQFMBQBUUTAaDQypISaADwJcvt2PqCCmgAwOq3avzSxdII3AUiJKATAZGhCSqgJAKNVF0GO1gRArz6jz43t0uuGwpna32qF1gSAR3Pc2Go4HP6k85Ch/gWX3W73h2LE3iDP71d0wquY/CzdWsBeXwtE/eGuxfceKFbG43EmjHprClU2OkCAVIhaQIgVxQ5u8l4YVtQ1iQABjLwG9XDixFAXkF6zYftYcU2TAMY7X7TZ8V2ClMPVM2AuL7BNpGwu4tQ/xkfd7hswFSIs3Envc5cUqTL+F3UYUxcJVQLA2Bfv8yfqAZUi+AKgPNdFSx9gEZYVRteVJ+ojFV6uKnO6IKE5aSO27M3DQ03eIpkxkdf42R276PnqwmeN+tbyGPW547U9ft/v94d9u83tObdtxAmQWgMydEQZG4XCT21S/IChDgM7cl6n0IeYrxCJ97m88GflYgiG87STrIqpULrz2JTbmiOWbcSUvbQttAmk+JLhijjEbYWyCZRh7s7J73517W/D/8gR1ptMbo/LJsBO4/Nw5uHcZrPJKSa4dw/oBJ+pjyBa5qHDIA+Z1JWFTwj+4qhmOPSj42ROoRP4nscx976VU+HeiQBjHz3jS4OqBLCfL3ohAidC6oxnkvrlcF0kRJFFDgI3PGsy3l6z8gw8gpfBXV0cGendKuOZJCAnyIkQT8h7ih3PMPZaGnDdqqG+mRSUE68UK7Ld40YbvZUcJzyXJ6qWOYVom4IRN3jSS15vH2SUaxLYTqkl2nw0NsU8/A5Pbe7oY6XVOtvt9gH1f9d8oaI1ENJyqPtNSmi/LO1Qe1tUU4BymYuQficlohCAAlJX5+ImACkhU26a6Tc1ATCc5W5fpLkujmYTyN0Oxver7AMkOV0jfjJEA+0/TOSkjPZ/hvxHXxdHtQ/AA41XbNRmgYx2E+AIyEkR7SZwlmXzZ0hIEXifR4KNfWJ7lfzPuwM32uAvhWS8ZdBSZJIAAAAASUVORK5CYII=" alt="sparkler" width="32" class="mx-auto mb-3">
+          結帳資訊
+        </h3>
+        <form action="./finish.html" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="material" class="form-label">取票資訊</label>
+            <input type="text" class="form-control rounded-0 bg-transparent border border-2 border-primary" id="material"
+              placeholder="請輸入身分證字號或護照號碼" required>
+            <p>
+              請輸入您的 <span class="text-success">身分證字號</span> 供取票使用，外籍人士請輸入 <span class="text-success">護照號碼</span>
+            </p>
+          </div>
+          <div class="mb-4 mb-lg-5">
+            <label for="pay" class="form-label">付款方式</label>
+            <div class="form-check">
+              <input type="radio" class="form-check-input border-primary" id="creditCard" name="payment" required>
+              <label class="form-check-label" for="creditCard">信用卡</label>
+            </div>
+            <div class="form-check mb-3">
+              <input type="radio" class="form-check-input border-primary" id="validationFormCheck3" name="payment" required>
+              <label class="form-check-label" for="validationFormCheck3">ATM虛擬帳號</label>
+            </div>
+          </div>
+          <button class="btn btn-primary rounded-0 h5 hover-arrow py-2 mb-3 d-lg-block mx-lg-auto" type="submit">確認訂單並繳費 $8000 <i
+              class="icofont-rounded-double-right"></i></button>
+        </form>
+      </div>
+    </main>
+
+    <footer class="footer text-center border-top border-3 border-primary py-5">
+  <h6>© 7TAO七逃. All Rights Reserved</h6>
+</footer>
+      
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/icofont/icofont.min.css">
+  <title>結帳</title>
+</head>
+
+<body class="bg-info">
+  <%- include('./layout/header'); -%>
+
+    <main class="container mb-6 mb-lg-7">
+      <div class="checkout mx-auto">
+        <ol class="position-relative d-flex justify-content-between text-center mb-4 mb-lg-6">
+          <li>
+            <span
+              class="d-flex justify-content-center align-items-center border border-primary text-secondary bg-primary mx-auto mb-2">1</span>
+            <h4 class="h6">訂單確認</h4>
+          </li>
+          <li>
+            <span
+              class="d-flex justify-content-center align-items-center border border-primary bg-info mx-auto mb-2">2</span>
+            <h4 class="h6">結帳付款</h4>
+          </li>
+          <li>
+            <span
+              class="d-flex justify-content-center align-items-center border border-primary bg-info mx-auto mb-2">3</span>
+            <h4 class="h6">訂購結果</h4>
+          </li>
+        </ol>
+        <h2 class="display-5 text-lg-center lh-sm mb-4 mb-lg-5">返老還童-制服聯誼</h2>
+        <ul class="border-top border-2 border-primary mb-5 mb-lg-6">
+          <li class="d-flex justify-content-between border-bottom border-1 border-primary py-2">
+            <span>日期</span>
+            <span>2023/5/12</span>
+          </li>
+          <li class="d-flex justify-content-between border-bottom border-1 border-primary py-2">
+            <span>票種</span>
+            <span>改頭換面票（含大改造）</span>
+          </li>
+          <li class="d-flex justify-content-between border-bottom border-1 border-primary py-2">
+            <span>票價</span>
+            <span>$8000</span>
+          </li>
+        </ul>
+        <h3 class="text-center mb-3">
+          <img src="../assets/images/sparkler.png" alt="sparkler" width="32" class="mx-auto mb-3">
+          聯絡人資料
+        </h3>
+        <form action="./payment.html" class="needs-validation" novalidate>
+          <div class="mb-3">
+            <label for="name" class="form-label">聯絡人姓名</label>
+            <input type="text" class="form-control rounded-0 bg-transparent border border-2 border-primary" id="name"
+              placeholder="請輸入聯絡人名稱" required>
+            <div class="invalid-feedback">
+              請輸入聯絡人名稱
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control rounded-0 bg-transparent border border-2 border-primary" id="email"
+              placeholder="請輸入Email" required>
+            <div class="invalid-feedback">
+              請輸入正確格式
+            </div>
+          </div>
+          <div class="mb-4 mb-lg-5">
+            <label for="tel" class="form-label">手機</label>
+            <input type="tel" class="form-control rounded-0 bg-transparent border border-2 border-primary" id="tel"
+              placeholder="請輸入手機號碼" required>
+            <div class="invalid-feedback">
+              請輸入手機號碼
+            </div>
+          </div>
+          <button class="btn btn-primary rounded-0 hover-arrow py-2 mb-3 d-lg-block mx-lg-auto" type="submit">確認表單資料 <i
+              class="icofont-rounded-double-right"></i></button>
+          <button class="btn btn-primary rounded-0 py-2 border-0 text-warning bg-transparent d-lg-block mx-lg-auto"
+            type="button">取消購票</button>
+        </form>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+      <script type="module" src="../main.js"></script>
+</body>
+
+</html>

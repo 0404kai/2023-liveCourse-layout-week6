@@ -1,4 +1,70 @@
-<h1 class="header">我是 header</h1>
-<a href="index.html">index</a>
-<a href="about.html">about</a>
-<a href="contact.html">contact</a>
+<header class="position-relative border-bottom border-2 border-primary mt-2 mb-3 mt-md-4 mb-md-5">
+  <div class="container d-flex align-items-center pb-3 pb-md-4">
+      <h1 class="me-md-6">
+        <a href="../pages/index.html" class="d-flex align-items-center">
+          <img src="../assets/images/logo.png" alt="logo" class="logo me-4 me-md-3">
+          <span class="d-none d-lg-block h2 me-1">7TAO</span>
+          <span class="d-none d-lg-block h6 fw-bold">活動訂票網</span>
+        </a>
+      </h1>
+      <div class="search d-flex align-self-md-stretch border border-1 border-primary me-4 me-md-0">
+        <input type="text" class="form-control border-primary bg-transparent rounded-0 shadow-none" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="探索活動">
+        <button class="btn text-secondary bg-black rounded-0 hover-scale" type="button" id="button-addon2"><i class="icofont-search-1"></i></button>
+      </div>
+      <nav class="navbar align-self-stretch ms-auto py-0">
+        <button class="btn-no-focus navbar-toggler h-100 border-1 border-primary rounded-1 d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#menuList" aria-controls="menuList" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <ul class="menu nav h5 d-none d-md-flex">
+          <li class="nav-item">
+            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#register">
+              <i class="icofont-ui-file"></i>
+              REGISTER
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="../pages/login.html" class="nav-link">
+              <i class="icofont-ui-user"></i>
+              LOGIN
+            </a>
+          </li>
+        </ul>
+      </nav>
+  </div>
+  <div class="burgerMenu container-fluid collapse position-absolute py-4 h5 border-top border-bottom border-2 border-primary bg-info d-md-none" id="menuList">
+    <ul class="navbar-nav">
+      <li class="me-4 mb-3 mb-md-0">
+        <a href="#">
+          <i class="icofont-ui-file"></i>
+          REGISTER
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="icofont-ui-user"></i>
+          LOGIN
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<div class="modal fade" id="register" tabindex="-1" aria-labelledby="registerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-0 text-center">
+      <div class="modal-header d-block position-relative border-bottom border-3 border-primary">
+        <h5 class="modal-title" id="registerLabel">立刻成為7TAO會員</h5>
+        <button type="button" class="btn-close position-absolute top-0 end-0 m-3 p-0" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body pt-md-6">
+        立刻成為七逃會員，加速活動報名流程並取得活動優惠資訊。<br>
+        您也可以先報名活動，日後再註冊帳號，<br>
+        系統會在認證您的Email後，協助您找回舊的訂單。
+      </div>
+      <div class="modal-footer border-0 pb-md-6">
+        <a href="#" class="btn btn-primary text-secondary rounded-0 mx-auto px-5 py-2">立即成為會員</a>
+      </div>
+    </div>
+  </div>
+</div>

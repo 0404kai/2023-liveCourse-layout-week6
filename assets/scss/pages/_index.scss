@@ -1,0 +1,178 @@
+.banner {
+  background-image: url("../../../assets/images/event/13.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  @include pc {
+    height: 518px;
+  }
+  time {
+    font-size: 32px;
+    line-height: 1.15;
+    padding-top: 16px;
+    padding-left: 40px;
+    @include pc {
+      font-size: 60px;
+      padding: 48px;
+    }
+  }
+  h2 {
+    letter-spacing: 0.9px;
+    font-size: 18px;
+    @include pc {
+      font-size: 24px;
+    }
+  }
+  p {
+    max-width: 832px;
+    font-family: "Noto Sans TC";
+  }
+}
+.explore {
+  img {
+    width: 40px;
+    @include pc {
+      width: 80px;
+    }
+  }
+  h3 {
+    font-size: 16px;
+    @include pc {
+      font-size: 24px;
+    }
+  }
+  li {
+    &:last-child {
+      a {
+        font-size: 24px;
+        line-height: 1.5;
+        @include pc {
+          font-size: 48px;
+          line-height: 1.25;
+        }
+      }
+    }
+  }
+}
+.recent {
+  span {
+    &:first-child {
+      font-size: 24px;
+      @include pc {
+        font-size: 64px;
+      }
+    }
+    &:last-child {
+      @include pc {
+        font-size: 32px;
+      }
+    }
+  }
+}
+.category {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.online {
+  div:first-child {
+    background-image: url(../../../assets/images/event/online.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top 32.5%;
+    height: 158px;
+    @include pc {
+      height: 317px;
+    }
+  }
+  p {
+    font-family: "Noto Sans TC";
+    text-align: justify;
+  }
+  a:hover {
+    color: #FBFF22 !important;
+  }
+}
+.marquee {
+  overflow: hidden;
+  p {
+    white-space: nowrap;
+    animation-name: arrow;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    @keyframes arrow {
+      from {
+        transform: translateX(-75%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+    @include pc {
+      font-size: 32px;
+    }
+  }
+  &.marquee2 {
+    p {
+      animation-direction: alternate-reverse;
+    }
+  }
+}
+.albums {
+  width: 83%;
+  @include pc {
+    width: auto;
+    gap: 16px;
+  }
+  li {
+    &:not(:last-child) {
+      margin-bottom: 32px;
+      @include pc {
+        margin-bottom: 0;
+      }
+    }
+    &:nth-child(2n+1):not(:first-child) {
+      transform: rotate(-2deg);
+    }
+    &:nth-child(2n+0) {
+      transform: rotate(2deg);
+    }
+    span {
+      transform: translate(-50%, -50%) rotate(-4deg);
+    }
+    img {
+      width: 100%;
+      height: 267px;
+      @include pc {
+        height: 274px;
+      }
+    }
+  }
+}
+.connect {
+  h4 {
+    font-family: "Noto Serif TC";
+  }
+  a {
+    font-family: "Noto Sans TC;";
+  }
+  > li{
+    @include iPad {
+      width: 50%;
+    }
+    &:first-child {
+      margin-right: -2px;
+    }
+  }
+}
+.slogan {
+  display: inline-block;
+  margin-bottom: 12px;
+  @include iPad {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+}

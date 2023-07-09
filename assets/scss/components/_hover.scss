@@ -1,0 +1,34 @@
+.hover-shadow {
+  &:hover {
+    box-shadow: 2px 2px 2px 2px;
+  }
+}
+.hover-arrow {
+  &:hover {
+    i {
+      display: inline-block;
+      animation-name: arrow;
+      animation-duration: 0.5s;
+      animation-iteration-count: infinite;
+    }
+  }
+  @keyframes arrow {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(3px);
+    }
+  }
+}
+.hover-scale {
+  &:hover {
+    i {
+      transform: scale(1.2);
+    }
+  }
+  i {
+    display: inline-block;
+    transition: 0.7s;
+  }
+}

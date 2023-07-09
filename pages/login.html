@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../assets/icofont/icofont.min.css">
+  <title>結帳</title>
+</head>
+
+<body class="bg-info">
+  <%- include('./layout/header'); -%>
+
+    <main class="login mx-auto mb-6 mb-lg-7 mt-lg-5">
+      <h3 class="h2 text-center mb-3">
+        <img src="../assets/images/sparkler.png" alt="sparkler" width="32" class="mx-auto mb-3">
+        會員登入
+      </h3>
+      <form action="./index.html" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="account" class="form-label">帳號</label>
+          <input type="text" class="form-control rounded-0 bg-transparent border border-2 border-primary" id="account"
+            placeholder="請輸入帳號" required>
+          <div class="invalid-feedback">
+            請輸入帳號
+          </div>
+        </div>
+        <div class="mb-4 mb-lg-5">
+          <label for="password" class="form-label">密碼</label>
+          <input type="password" class="form-control rounded-0 bg-transparent border border-2 border-primary" id="password"
+            placeholder="請輸入密碼" required>
+          <div class="invalid-feedback">
+            請輸入密碼
+          </div>
+        </div>
+        <button class="btn btn-primary w-100 rounded-0 py-3 py-lg-2" type="submit">登入 <i
+            class="icofont-rounded-double-right"></i></button>
+      </form>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+      <script type="module" src="../main.js"></script>
+</body>
+
+</html>

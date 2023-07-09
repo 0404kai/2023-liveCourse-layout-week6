@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&family=Yeseva+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Noto+Serif+TC:wght@700&family=Yeseva+One&display=swap");
 
 @import "../../node_modules/bootstrap/scss/functions";
-@import './utils/variables';
+@import "./utils/variables";
 
+@import "./base/base";
+@import "./mixin/breakpoints";
+@import "./components/tag";
+@import "./components/card";
+@import "./components/hover";
 
-@import './layout/header.scss';
-@import './layout/footer.scss';
+@import "./layout/header";
+@import "./layout/footer";
 
-
-@import './pages/index.scss';
+@import "./pages/index";
+@import "./pages/event-list";
+@import "./pages/event-details";
+@import "./pages/checkout";
+@import "./pages/login";
 
 @import "../../node_modules/bootstrap";
-
-// size 
-// 18 20 22 24 32 48 60 64

@@ -1,4 +1,27 @@
-.header{
-  background: #69F0AE;
-  font-size: 64px;
+.logo {
+  width: 40px;
+  @include iPad {
+    width: 53px;
+  }
+}
+.search {
+  width: 207px;
+  @include iPad {
+    width: 335px;
+  }
+}
+.menu {
+  li:last-child {
+    a {
+      margin-right: -16px;
+    }
+  }
+  a {
+    &:hover {
+      color: #9C9E18;
+    }
+  }
+}
+.burgerMenu {
+  z-index: 1;
 }

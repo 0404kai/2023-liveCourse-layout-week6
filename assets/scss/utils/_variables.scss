@@ -298,12 +298,12 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       #030303 !default; // $blue;
+$primary:       #030303 !default;  // $blue
 $secondary:     #FBFF22 !default;  // $gray-600
 $success:       #C96464 !default;  // $green
-$info:          #F3F1E5 !default; // $cyan
-$warning:       $yellow !default;
-$danger:        $red !default;
+$info:          #F3F1E5 !default;  // $cyan
+$warning:       #878787 !default;  // $yellow
+$danger:        #EBEAE8 !default;  // $red
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 // scss-docs-end theme-color-variables
@@ -317,7 +317,9 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "shallow":    #4F4F4F,
+  "bright":     #9C9E18
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -341,9 +343,9 @@ $enable-gradients:            false !default;
 $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
 $enable-smooth-scroll:        true !default;
-$enable-grid-classes:         true !default;
+$enable-grid-classes:         false !default; // true
 $enable-container-classes:    true !default;
-$enable-cssgrid:              false !default;
+$enable-cssgrid:              true !default;  // false
 $enable-button-pointers:      true !default;
 $enable-rfs:                  true !default;
 $enable-validation-icons:     true !default;
@@ -379,6 +381,8 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 2, // 3
+  6: $spacer * 3,
+  7: $spacer * 3.75
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -407,7 +411,7 @@ $body-text-align:           null !default;
 // Style anchor elements.
 
 $link-color:                              $primary !default;
-$link-decoration:                         underline !default;
+$link-decoration:                         none !default;  // underline
 $link-shade-percentage:                   20% !default;
 $link-hover-color:                        shift-color($link-color, $link-shade-percentage) !default;
 $link-hover-decoration:                   null !default;
@@ -540,7 +544,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Yeseva One", "Noto Serif TC", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
@@ -549,9 +553,9 @@ $font-family-code:            var(--#{$prefix}font-monospace) !default;
 // $font-size-root affects the value of `rem`, which is used for as well font sizes, paddings, and margins
 // $font-size-base affects the font size of the body text
 $font-size-root:              null !default;
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-sm:                $font-size-base * .875 !default;
-$font-size-lg:                $font-size-base * 1.25 !default;
+$font-size-base:              1rem !default;  // Assumes the browser default, typically `16px`
+$font-size-sm:                $font-size-base !default;  // $font-size-base * .875
+$font-size-lg:                $font-size-base !default;  // $font-size-base * 1.25
 
 $font-weight-lighter:         lighter !default;
 $font-weight-light:           300 !default;
@@ -566,11 +570,11 @@ $line-height-base:            1.5 !default;
 $line-height-sm:              1.25 !default;
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                $font-size-base * 2 !default;   // 2.5
+$h2-font-size:                $font-size-base * 1.5 !default;     // 2
+$h3-font-size:                $font-size-base * 1.375 !default;  // 1.75
+$h4-font-size:                $font-size-base * 1.25 !default;   // 1.5
+$h5-font-size:                $font-size-base * 1.125 !default;  // 1.25
 $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
@@ -599,7 +603,7 @@ $display-font-sizes: (
   1: 5rem,
   2: 4.5rem,
   3: 4rem,
-  4: 3.5rem,
+  4: 3.75rem,  // 3.5rem
   5: 3rem,
   6: 2.5rem
 ) !default;
@@ -1012,8 +1016,8 @@ $form-floating-transition:        opacity .1s ease-in-out, transform .1s ease-in
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $form-text-font-size !default;
 $form-feedback-font-style:          $form-text-font-style !default;
-$form-feedback-valid-color:         $success !default;
-$form-feedback-invalid-color:       $danger !default;
+$form-feedback-valid-color:         $green !default;  // $success
+$form-feedback-invalid-color:       $success !default;  // $danger
 
 $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
 $form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
@@ -1060,7 +1064,7 @@ $nav-link-padding-y:                .5rem !default;
 $nav-link-padding-x:                1rem !default;
 $nav-link-font-size:                null !default;
 $nav-link-font-weight:              null !default;
-$nav-link-color:                    var(--#{$prefix}link-color) !default;
+$nav-link-color:                    $primary !default;   // var(--#{$prefix}link-color)
 $nav-link-hover-color:              var(--#{$prefix}link-hover-color) !default;
 $nav-link-transition:               color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out !default;
 $nav-link-disabled-color:           $gray-600 !default;
@@ -1098,7 +1102,7 @@ $navbar-toggler-padding-y:          .25rem !default;
 $navbar-toggler-padding-x:          .75rem !default;
 $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
-$navbar-toggler-focus-width:        $btn-focus-width !default;
+$navbar-toggler-focus-width:        none !default;  // $btn-focus-width
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
 
 $navbar-light-color:                rgba($black, .55) !default;

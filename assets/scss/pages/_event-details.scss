@@ -1,0 +1,67 @@
+.fellowship {
+  height: 180px;
+  @include iPad {
+    height: 550px;
+  }
+}
+.date {
+  > time {
+    font-size: 24px;
+    @include pc {
+      font-size: 48px;
+    }
+  }
+  > div {
+    > time {
+      font-size: 22px;
+      @include pc {
+        font-size: 48px;
+      }
+    }
+    > span {
+      font-size: 48px;
+      @include pc {
+        font-size: 80px;
+      }
+    }
+    div {
+      time {
+        font-size: 16px;
+        line-height: 1;
+        @include pc {
+          font-size: 32px;
+        }
+      }
+      span {
+        font-size: 24px;
+        @include pc {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+.ticket {
+  font-family: "Noto Sans TC";
+  font-size: 14px;
+  white-space: nowrap;
+  @include pc {
+    font-size: 16px;
+  }
+  thead {
+    th {
+      &:not(:last-child) {
+        width: 30%;
+      }
+      &:last-child {
+        width: 10%;
+      }
+    }
+  }
+  a {
+    &:hover {
+      color: $secondary;
+      background-color: $primary;
+    }
+  }
+}

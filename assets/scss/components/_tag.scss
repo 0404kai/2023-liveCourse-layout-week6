@@ -1,0 +1,14 @@
+.tag {
+  outline: 1px solid #000;
+  border-left: 4px solid #000;
+  padding: 4px 16px 4px 12px;
+  &:hover {
+    outline: none;
+    border-left-color:#fbff22;
+    color: #fff;
+    background-color: #030303;
+  }
+  @include pc {
+    padding: 4px 24px 4px 20px;
+  }
+}

@@ -1,5 +1,5 @@
 .banner {
-  background-image: url("../../../assets/images/event/13.jpg");
+  background-image: url("https://github.com/0404kai/2023-liveCourse-layout-week6/blob/main/assets/images/event/13.jpg?raw=true");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -77,7 +77,7 @@
 }
 .online {
   div:first-child {
-    background-image: url(../../../assets/images/event/online.jpg);
+    background-image: url("https://github.com/0404kai/2023-liveCourse-layout-week6/blob/main/assets/images/event/online.jpg?raw=true");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top 32.5%;
@@ -91,19 +91,19 @@
     text-align: justify;
   }
   a:hover {
-    color: #FBFF22 !important;
+    color: #FBFF22;
   }
 }
 .marquee {
   overflow: hidden;
   p {
     white-space: nowrap;
-    animation-name: arrow;
+    animation-name: marquee;
     animation-duration: 15s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: linear;
-    @keyframes arrow {
+    @keyframes marquee {
       from {
         transform: translateX(-75%);
       }

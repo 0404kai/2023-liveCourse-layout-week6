@@ -10,11 +10,11 @@ main {
 }
 ol, ul {
   list-style: none;
-  margin-bottom: 0 !important;
-  padding-left: 0 !important;
+  margin-bottom: 0;
+  padding-left: 0;
 }
 p {
-  margin-bottom: 0 !important;
+  margin-bottom: 0;
 }
 a, img, time {
   display: block;
@@ -25,7 +25,4 @@ img {
 }
 a, button {
   transition: all .3s;
-}
-input:focus {
-  box-shadow: none !important;
 }

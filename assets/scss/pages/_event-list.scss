@@ -6,12 +6,10 @@
     }
   }
 }
-.pagination {
-  .page-link {
-    background-color: transparent;
-    &:hover {
-      color: $secondary;
-      background-color: $primary;
-    }
+.page-link {
+  background-color: transparent;
+  &:hover {
+    color: $secondary;
+    background-color: $primary;
   }
 }
